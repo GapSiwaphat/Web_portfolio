@@ -6,14 +6,14 @@ const Hero = () => {
     <div className="bg-gradient-to-r from-indigo-900 to-purple-600 text-white h-screen flex flex-col-reverse md:flex-row items-center justify-center px-6 md:px-12 lg:px-24 text-center md:text-left">
       
       <div className="md:w-1/3 max-w-3xl">
-        <h1 className="text-3xl md:text-5xl font-bold leading-tight">
+        <h1 className="text-4xl md:text-5xl font-bold leading-tight">
           I'm{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
             Siwaphat Moonma
           </span>
           , Web Developer
         </h1>
-        <p className="mt-4 text-base md:text-lg text-gray-300">
+        <p className="mt-4 text-base md:text-1xl text-gray-300">
           I am committed to working in web development.
         </p>
         <div className="mt-6">
