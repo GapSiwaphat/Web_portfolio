@@ -9,7 +9,7 @@ const Hero = () => {
     >
       <div className="md:w-1/3 max-w-3xl">
         <h1 className="text-4xl md:text-6xl font-bold leading-tight text-black mt-10">
-          I'm{" "}
+          I &apos; m{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500">
             <span className="inline-block min-w-[200px]">
               <Typewriter

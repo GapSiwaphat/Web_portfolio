@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHouse, faBriefcase, faAddressCard } from '@fortawesome/free-solid-svg-icons';
+
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,22 +10,27 @@ const Navbar = () => {
     <nav className="bg-gradient-to-r from-white to-white text-black fixed top-0 left-0 w-full z-50 filter drop-shadow-lg">
       <div className="container mx-auto px-8 md:px-16 lg:px-24 py-4 flex justify-between items-center">
         <div className="text-2xl font-bold">Gap Siwaphat</div>
-        <div className="hidden md:flex space-x-8 text-lg">
-          <a href="#hero" className="hover:text-gray-800 transition relative group">
-            <span className="link-underline">Home</span>
+        <div className="hidden md:flex space-x-10 text-lg ">
+          <a href="#hero" className="hover:text-gray-800 transition relative group ">
+            <span className="link-underline ">
+              <FontAwesomeIcon icon={faHouse}className="mr-2"/> Home
+            </span>
           </a>
-          <a href="#about" className="hover:text-gray-800 transition relative group">
-            <span className="link-underline">About Me</span>
+          <a href="#about" className="hover:text-gray-800 transition relative group ">
+            <span className="link-underline">
+              <FontAwesomeIcon icon={faAddressCard} className="mr-2"/>About Me
+            </span>
           </a>
           <a href="#project" className="hover:text-gray-800 transition relative group">
-            <span className="link-underline">Projects</span>
+            <span className="link-underline">
+              <FontAwesomeIcon icon={faBriefcase} className="mr-2"/>Projects
+            </span>
           </a>
         </div>
 
         <div className="hidden md:flex">
           <button
-            className="px-6 py-3 rounded-full bg-white text-gray-800 font-medium 
-            shadow-[8px_8px_16px_#bebebe,-8px_-8px_16px_#ffffff] transition-transform duration-300 hover:scale-105"
+            className="px-6 py-3 rounded-md bg-yellow-300 text-black font-bold "
           >
             Contact
           </button>

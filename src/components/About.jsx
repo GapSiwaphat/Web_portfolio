@@ -1,4 +1,3 @@
-import React from "react";
 import Profile from "../assets/1.png";
 
 const About = () => {
@@ -7,15 +6,15 @@ const About = () => {
       <div className="container mx-auto px-4 md:px-8 lg:px-24">
         <h2 className="text-4xl font-bold text-center mb-12 drop-shadow-lg">About Me</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-2xl shadow-lg p-6 flex justify-center">
+          <div className="bg-white rounded-1xl shadow-lg p-6 flex justify-center">
             <img
               src={Profile}
               alt="Profile"
-              className="w-64 h-80 rounded-xl object-cover"
+              className="w-64 h-80 rounded-md object-cover"
             />
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-6">
+          <div className="bg-white rounded-md shadow-lg p-6">
             <h1 className="font-bold text-2xl text-center mb-10 md:text-center bg-gradient-to-r from-pink-100 to-blue-100 rounded-full py-2 px-6 shadow-md">personal record</h1>
             <p className="text-lg leading-relaxed">
               ผมนาย ศิวภัทร มูลมา ปัจจุบันอายุ 21 ปี ศึกษาอยู่ที่มหาวิทยาลัยราชภัฏอุดรธานี<br />
@@ -23,7 +22,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-lg p-6">
+          <div className="bg-white rounded-md shadow-lg p-6">
             <h3 className="text-2xl font-bold text-center md:text-center mb-10 bg-gradient-to-r from-pink-100 to-blue-100 rounded-full py-2 px-6 shadow-md">Skills</h3>
             {[
               { name: "HTML", percent: 80 },
