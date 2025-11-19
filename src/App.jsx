@@ -17,7 +17,10 @@ function App() {
         <About />
         <Projects />
         <Contact />
-        <Footer />
+        <div className='mt-40'>
+            <Footer />
+        </div>
+      
     </div>
   )
 }

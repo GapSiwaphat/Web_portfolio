@@ -1,92 +1,77 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faBriefcase, faAddressCard } from '@fortawesome/free-solid-svg-icons';
-
+import { faHouse, faBriefcase, faAddressCard, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const accentColor = "text-gray-700 ";
+  const buttonBg = "bg-gray-900 hover:bg-gray-700"; 
+  const buttonText = "text-white"; 
 
   return (
-    <nav className="bg-gradient-to-r from-white to-white text-black fixed top-0 left-0 w-full z-50 filter drop-shadow-lg">
+    <nav className="bg-white text-gray-900 fixed top-0 left-0 w-full z-50 border-b border-gray-200">
       <div className="container mx-auto px-8 md:px-16 lg:px-24 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold">Gap Siwaphat</div>
-        <div className="hidden md:flex space-x-10 text-lg ">
-          <a href="#hero" className="hover:text-gray-800 transition relative group ">
-            <span className="link-underline ">
-              <FontAwesomeIcon icon={faHouse}className="mr-2"/> Home
-            </span>
+        <div className="text-2xl font-light tracking-wider">
+          <span className={accentColor}>Gap</span> Siwaphat
+        </div>
+
+        <div className="hidden md:flex space-x-10 text-lg font-normal">
+          <a href="#hero" className="hover:text-gray-500 transition duration-200 flex items-center">
+            <FontAwesomeIcon icon={faHouse} className={`mr-2 text-gray-400`} /> Home
           </a>
-          <a href="#about" className="hover:text-gray-800 transition relative group ">
-            <span className="link-underline">
-              <FontAwesomeIcon icon={faAddressCard} className="mr-2"/>About Me
-            </span>
+          <a href="#about" className="hover:text-gray-500 transition duration-200 flex items-center">
+            <FontAwesomeIcon icon={faAddressCard} className={`mr-2 text-gray-400`} /> About Me
           </a>
-          <a href="#project" className="hover:text-gray-800 transition relative group">
-            <span className="link-underline">
-              <FontAwesomeIcon icon={faBriefcase} className="mr-2"/>Projects
-            </span>
+          <a href="#project" className="hover:text-gray-500 transition duration-200 flex items-center">
+            <FontAwesomeIcon icon={faBriefcase} className={`mr-2 text-gray-400`} /> Projects
           </a>
         </div>
 
         <div className="hidden md:flex">
-          <button
-            className="px-6 py-3 rounded-md bg-yellow-300 text-black font-bold "
-          >
-            Contact
-          </button>
+          <a href="#contact">
+            <button
+              className={`px-6 py-2 rounded-sm ${buttonBg} ${buttonText} font-medium transition duration-300 shadow-md`}
+            >
+              Contact
+            </button>
+          </a>
         </div>
 
         <button
           className="md:hidden focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label="Toggle menu"
         >
-          <svg
-            className="w-8 h-8 text-black"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d={
-                isOpen
-                  ? "M6 18L18 6M6 6l12 12" // X icon
-                  : "M4 6h16M4 12h16M4 18h16" // Hamburger icon
-              }
-            />
-          </svg>
+          <FontAwesomeIcon icon={isOpen ? faTimes : faBars} className="w-6 h-6 text-gray-900" />
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black text-white flex flex-col items-center py-4 space-y-4">
+        <div className="md:hidden bg-gray-50 border-t border-gray-200 flex flex-col items-center py-4 space-y-4 shadow-inner">
           <a
-            href="#home"
-            className="hover:text-gray-400 transition"
+            href="#hero"
+            className="text-gray-700 hover:text-gray-900 transition font-medium"
             onClick={() => setIsOpen(false)}
           >
-            Home
+            <FontAwesomeIcon icon={faHouse} className={`mr-2 text-gray-500`} /> Home
           </a>
           <a
             href="#about"
-            className="hover:text-gray-400 transition"
+            className="text-gray-700 hover:text-gray-900 transition font-medium"
             onClick={() => setIsOpen(false)}
           >
-            About Me
+            <FontAwesomeIcon icon={faAddressCard} className={`mr-2 text-gray-500`} /> About Me
           </a>
           <a
             href="#project"
-            className="hover:text-gray-400 transition"
+            className="text-gray-700 hover:text-gray-900 transition font-medium"
             onClick={() => setIsOpen(false)}
           >
-            Projects
+            <FontAwesomeIcon icon={faBriefcase} className={`mr-2 text-gray-500`} /> Projects
           </a>
           <a
             href="#contact"
-            className="bg-gradient-to-r from-green-400 to-blue-500 px-4 py-2 rounded-full"
+            className={`w-4/5 text-center px-4 py-2 rounded-sm ${buttonBg} ${buttonText} font-medium transition duration-300 shadow-md`}
             onClick={() => setIsOpen(false)}
           >
             Contact Me
